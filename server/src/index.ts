@@ -20,12 +20,6 @@ app.post("/lists", async (req: Request, res: Response) => {
     res.json(creatredList);
 });
 
-// MVC: Views
-app.get("/", (req: Request, res: Response) => {
-    res.send("Hellow World");
-})
-// MVC: End
-
 //Server connect
 const connectDb = async () => {
     const mongooseConnect = mongoose.connect(process.env.ATLAS_URI || "");
